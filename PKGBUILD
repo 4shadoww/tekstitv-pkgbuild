@@ -1,4 +1,4 @@
-# Maintainer: Noa-Emil Nissinen <aur dot satella at spamgourmet dot org>
+# Maintainer: Noa-Emil Nissinen <aur dot easter at spamgourmet dot org>
 
 pkgname=tekstitv
 pkgver=0.9
