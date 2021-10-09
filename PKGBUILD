@@ -11,6 +11,11 @@ source=("https://github.com/Nykseli/yle-tekstitv/archive/refs/tags/v$pkgver.tar.
 md5sums=("d9f6a7ac7ff86380f84c6f2930d845ba")
 
 
+prepare(){
+  cd yle-tekstitv-$pkgver
+  patch src/drawer.c ../../transparent-background.patch
+}
+
 build(){
   cd yle-tekstitv-$pkgver
   ./configure --prefix=/usr --disable-lib-build

@@ -1,0 +1,20 @@
+index 3067404..09cac3f 100644
+--- a/src/drawer.c
++++ b/src/drawer.c
+@@ -202,6 +202,7 @@ static void curl_load_error(drawer* drawer, html_parser* parser)
+  */
+ static void set_main_window_size(drawer* drawer)
+ {
++    use_default_colors();
+     if (drawer->window != NULL)
+         delwin(drawer->window);
+     if (drawer->info_window == NULL)
+@@ -217,7 +218,7 @@ static void set_main_window_size(drawer* drawer)
+     drawer->color_support = has_colors();
+     drawer->text_color = COLOR_WHITE;
+     drawer->link_color = COLOR_BLUE;
+-    drawer->background_color = COLOR_BLACK;
++    drawer->background_color = -1;
+     drawer->highlight_row = -1;
+     drawer->highlight_col = -1;
+     drawer->highlight_row_size = 0;
